@@ -1,16 +1,127 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en"> 
 
-<header>
-    <p>Hello World!</p>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/script.js"></script>
+
+    <title>Chiara Knicker Portfolio</title>
+</head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="name">ChiaraKnicker.</a>
+            <a class="nav-icon" onclick="myFunction()">
+              <i class="fa fa-bars icon"></i>
+            </a>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="section-with-picture">
+        <div class="imagerap">
+            <img src="images/memoji.png" alt="memoji">
+        </div>
+        <div class="content">
+            <h1>I'm Chiara Knicker, a computer science student.</h1>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="about">
+        <h2>About Me</h3>
+        <p>I am a final year computer science student at The University of Edinburgh.</p>
+
+        <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-lg icon"></i></a>  
+        <a href="https://linkedin.com/in/chiara-knicker" target="_blank"><i class="fa fa-linkedin fa-lg icon"></i></a>
+        
+        <h4>What I'm interested in</h4>
+        <div class="container">
+            <div class="icons">
+              <i class="fa fa-shield fa-lg icon"></i>
+            </div>
+            <h3>Cybersecurity</h3>
+            <p class="description">
+              Interest summary text goes here...
+            </p>
+            <a href="#relatedProjects" target="_blank"><i class="fa fa-link icon"></i>See related projects</a>
+            <ul class="skills-list">
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+              <li>Skill 3</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="icons">
+              <i class="fa fa-cogs fa-lg icon"></i>
+            </div>
+            <h3>Embedded Systems</h3>
+            <p class="description">
+              Interest summary text goes here...
+            </p>
+            <a href="#relatedProjects" target="_blank"><i class="fa fa-link icon"></i>See related projects</a>
+            <ul class="skills-list">
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+              <li>Skill 3</li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="projects">
+        <h2>Most Recent Projects</h2>
+        <p>Most recent projects I have been working on</p>
+
+        <div class="container">
+            <div class="icons">
+              <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-2x icon"></i></a>
+              <!--<a href="#project1" target="_blank"><i class="fa fa-external-link fa-lg icon"></i></a>-->
+            </div>
+            <h3><a href="#project1">Project 1</a></h3>
+            <p class="description">
+              Project summary text goes here...
+            </p>
+            <a href="#project1" target="_blank"><i class="fa fa-link icon"></i>More info</a>
+            <ul class="skills-list">
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+              <li>Skill 3</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="icons">
+              <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-2x icon"></i></a>
+              <!--<a href="#project2" target="_blank"><i class="fa fa-external-link fa-lg icon"></i></a>-->
+            </div>
+            <h3><a href="#project2">Project 2</a></h3>
+            <p class="description">
+              Project summary text goes here...
+            </p>
+            <a href="#project1" target="_blank"><i class="fa fa-link icon"></i>More info</a>
+            <ul class="skills-list">
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+              <li>Skill 3</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <hr>
 
 </body>
-
-<footer>
-
-</footer>
 
 </html>

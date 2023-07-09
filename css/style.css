@@ -1,0 +1,292 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: white;
+  }
+  
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 20px;
+    z-index: 100;
+}
+
+section {
+    margin: 150px 150px
+}
+
+.section-with-picture {
+    display: flex;
+    align-items: center;
+}
+  
+.section-with-picture img {
+    float: left;
+    margin-right: 20px;
+    width: 200px; /* Adjust the width according to your image size */
+    height: auto;
+}
+
+.sm-margin-top {
+    margin-top: 60px;
+}
+
+.sm-margin-bottom {
+    margin-bottom: 60px;
+}
+
+hr {
+    margin-left: 150px;
+    margin-right: 150px;
+    border-color: grey;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h2 {
+    line-height: 2;
+}
+
+h4 {
+    margin-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: white;
+}
+
+a:hover {
+    color: grey;
+}
+
+.container {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 30px 0;
+    position: relative;
+}
+  
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+  
+.description {
+    color: lightgrey;
+}
+  
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+}
+  
+.skills-list li {
+    color: grey;
+    font-size: 14px;
+    margin: 0 5px;
+} 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+  
+.name {
+    font-size: xx-large;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+  
+.nav-links li {
+    margin-left: 60px;
+}
+  
+.nav-links a {
+    font-size: large;
+}
+
+.nav-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: large;
+}
+  
+.timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 40px;
+}
+  
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 34px; /* position line to be in middle of bullet: 40px (pading-left) - 10px/2 (bullet width) - 2px/2 (line width) */
+    width: 2px;
+    background-color: grey;
+}
+  
+  .timeline li {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .timeline li .bullet {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+  }
+  
+  .timeline li .content {
+    margin-left: 30px;
+  }
+  
+  .timeline li h3 {
+    margin: 0;
+  }
+  
+  .year {
+    font-weight: bold;
+    margin-top: 5px;
+    color: grey;
+  }
+  
+  .description {
+    margin-top: 10px;
+  }
+  
+  .skills-list-resume {
+    margin-left: -10px;
+    list-style: none;
+  }
+
+  .skills-list-resume li {
+    margin-bottom: 10px;
+  }
+  
+  .skills-list-resume li:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    margin-right: 30px;
+    vertical-align: middle;
+  }
+
+@media screen and (max-width: 600px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .nav-icon {
+      display: block;
+    }
+  
+    .nav-links.active {
+        display: flex;
+        position: absolute;
+        top: 70%;
+        right: 0;
+        width: 15%;
+        background-color: black;
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    section {
+        margin: 60px 60px
+    }
+
+    hr {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .section-with-picture {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-with-picture img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px; /* Centers the image and adds bottom margin */
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 601px) {
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    section {
+        margin: 90px 90px
+    }
+
+    hr {
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+
+    .section-with-picture {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-with-picture img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px; /* Centers the image and adds bottom margin */
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 901px) {
+    .nav-links li {
+        margin-left: 40px;
+    }
+
+    section {
+        margin: 120px 120px
+    }
+
+    hr {
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+}
