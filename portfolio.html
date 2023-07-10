@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <script src="js/script.js"></script>
 
     <title>Chiara Knicker Portfolio</title>
@@ -26,9 +28,91 @@
         </nav>
     </header>
 
-    <section id="">
+    <section id="" class="sm-margin-bottom">
         <h1>Portfolio</h1>
+        <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github icon"></i>My GitHub</a>
     </section>
+
+    <hr>
+
+    <section id="" class="sm-margin-top sm-margin-bottom">
+        <div class="filter">
+            <h2>Filter</h2>
+            <div id="checkboxes">
+                <label>
+                    <input type="checkbox" value="cybersecurity" onchange="filterProjects()">
+                    Cybersecurity
+                </label>
+                <label>
+                    <input type="checkbox" value="embedded-systems" onchange="filterProjects()">
+                    Embedded Systems
+                </label>
+                <label>
+                    <input type="checkbox" value="other" onchange="filterProjects()">
+                    Other
+                </label>
+                <!-- Add more checkboxes for other project areas -->
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="" class="sm-margin-top sm-margin-bottom">
+        <div class="container cybersecurity other">
+            <div class="icons">
+              <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-2x icon"></i></a>
+              <!--<a href="#project1" target="_blank"><i class="fa fa-external-link fa-lg icon"></i></a>-->
+            </div>
+            <h3><a href="project1.html">Project 1</a></h3>
+            <p class="topic">Area</p>
+            <p class="description">
+              Project summary text goes here...
+            </p>
+            <a href="project1.html"><i class="fa fa-link icon"></i>More info</a>
+            <ul class="skills-list">
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+              <li>Skill 3</li>
+            </ul>
+        </div>
+        <div class="container cybersecurity">
+            <div class="icons">
+              <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-2x icon"></i></a>
+              <!--<a href="#project1" target="_blank"><i class="fa fa-external-link fa-lg icon"></i></a>-->
+            </div>
+            <h3><a href="#project2">Project 2</a></h3>
+            <p class="topic">Area</p>
+            <p class="description">
+              Project summary text goes here...
+            </p>
+            <a href="#project2"><i class="fa fa-link icon"></i>More info</a>
+            <ul class="skills-list">
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+              <li>Skill 3</li>
+            </ul>
+        </div>
+        <div class="container embedded-systems">
+            <div class="icons">
+              <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-2x icon"></i></a>
+              <!--<a href="#project1" target="_blank"><i class="fa fa-external-link fa-lg icon"></i></a>-->
+            </div>
+            <h3><a href="#project3">Project 3</a></h3>
+            <p class="topic">Area</p>
+            <p class="description">
+              Project summary text goes here...
+            </p>
+            <a href="#project3"><i class="fa fa-link icon"></i>More info</a>
+            <ul class="skills-list">
+              <li>Skill 1</li>
+              <li>Skill 2</li>
+              <li>Skill 3</li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
     
 </body>
 
