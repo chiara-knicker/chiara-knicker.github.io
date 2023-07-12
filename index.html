@@ -1,89 +1,72 @@
 <!DOCTYPE html>
 <html lang="en"> 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <script src="js/script.js"></script>
-
-    <title>Chiara Knicker Portfolio</title>
+<head id="myHead">
+  <script src="js/script.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="name">ChiaraKnicker.</a>
-            <a class="nav-icon" onclick="myFunction()">
-              <i class="fa fa-bars icon"></i>
-            </a>
-            <ul class="nav-links" id="navLinks">
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header id="myHeader"></header>
+    <script>document.getElementById("myHeader").innerHTML = myHeader;</script>
     
-    <section id="home" class="section-with-picture">
-        <div class="imagerap">
+    <section id="home" class="section-with-picture lg-margin-top lg-margin-bottom">
+        <div>
             <img src="images/memoji.png" alt="memoji">
         </div>
-        <div class="content">
-            <h1>I'm Chiara Knicker, a computer science student.</h1>
+        <div>
+            <p>I'm Chiara Knicker, a computer science student.</p>
         </div>
+    </section>
+
+    <section id="shortcuts" class="lg-margin-bottom">
+      <a href="#about"><div class="shortcut"><i class="fa fa-user fa-lg icon"></i>About Me</div></a>
+      <a href="resume.html#education"><div class="shortcut"><i class="fa fa-graduation-cap fa-lg icon"></i>Education</div></a>
+      <a href="portfolio.html"><div class="shortcut"><i class="fa fa-folder fa-lg icon"></i>Projects</div></a>
+      <a href="resume.html#skills"><div class="shortcut"><i class="fa fa-code fa-lg icon"></i>Skills</div></a>
     </section>
 
     <hr>
 
-    <section id="about">
-        <h2>About Me</h3>
+    <section id="about" class="lg-margin-top lg-margin-bottom">
+        <h1>About Me</h2>
         <p>I am a final year computer science student at The University of Edinburgh.</p>
 
         <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-lg icon"></i></a>  
         <a href="https://linkedin.com/in/chiara-knicker" target="_blank"><i class="fa fa-linkedin fa-lg icon"></i></a>
         
         <h4>What I'm interested in</h4>
-        <div class="container">
-            <div class="icons">
-              <i class="fa fa-shield fa-lg icon"></i>
-            </div>
+
+        <div class="interest-container">
+          <div class="icon-container">
+            <i class="fa fa-shield fa-3x icon"></i>
+          </div>
+          <div class="text-container">
             <h3>Cybersecurity</h3>
-            <p class="description">
+            <p class="lightgrey">
               Interest summary text goes here...
             </p>
             <a href="portfolio.html?filter=cybersecurity"><i class="fa fa-link icon"></i>See related projects</a>
-            <ul class="skills-list">
-              <li>Skill 1</li>
-              <li>Skill 2</li>
-              <li>Skill 3</li>
-            </ul>
+          </div>
         </div>
 
-        <div class="container">
-            <div class="icons">
-              <i class="fa fa-cogs fa-lg icon"></i>
-            </div>
+        <div class="interest-container">
+          <div class="icon-container">
+            <i class="fa fa-cogs fa-3x icon"></i>
+          </div>
+          <div class="text-container">
             <h3>Embedded Systems</h3>
-            <p class="description">
+            <p class="lightgrey">
               Interest summary text goes here...
             </p>
             <a href="portfolio.html?filter=embedded-systems"><i class="fa fa-link icon"></i>See related projects</a>
-            <ul class="skills-list">
-              <li>Skill 1</li>
-              <li>Skill 2</li>
-              <li>Skill 3</li>
-            </ul>
+          </div>
         </div>
     </section>
 
     <hr>
 
-    <section id="projects">
-        <h2>Most Recent Projects</h2>
+    <section id="projects" class="lg-margin-top lg-margin-bottom">
+        <h1>Most Recent Projects</h2>
         <p>Most recent projects I have been working on</p>
 
         <div class="container">
@@ -92,8 +75,8 @@
               <!--<a href="#project1" target="_blank"><i class="fa fa-external-link fa-lg icon"></i></a>-->
             </div>
             <h3><a href="project1.html">Project 1</a></h3>
-            <p class="topic">Area</p>
-            <p class="description">
+            <p class="topic"><i class="fa fa-shield icon"></i><i class="fa fa-cogs icon"></i>Area</p>
+            <p class="lightgrey">
               Project summary text goes here...
             </p>
             <a href="project1.html"><i class="fa fa-link icon"></i>More info</a>
@@ -111,7 +94,7 @@
             </div>
             <h3><a href="#project2">Project 2</a></h3>
             <p class="topic">Area</p>
-            <p class="description">
+            <p class="lightgrey">
               Project summary text goes here...
             </p>
             <a href="#project1"><i class="fa fa-link icon"></i>More info</a>
@@ -125,6 +108,9 @@
     </section>
 
     <hr>
+
+    <footer id="myFooter"></footer>
+    <script>document.getElementById("myFooter").innerHTML = myFooter;</script>
 
 </body>
 

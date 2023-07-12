@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en"> 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <script src="js/script.js"></script>
-
-    <title>Chiara Knicker Portfolio</title>
+<head id="myHead">
+  <script src="js/script.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="name">ChiaraKnicker.</a>
-            <a class="nav-icon" onclick="myFunction()">
-              <i class="fa fa-bars icon"></i>
-            </a>
-            <ul class="nav-links" id="navLinks">
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header id="myHeader"></header>
+  <script>document.getElementById("myHeader").innerHTML = myHeader;</script>
 
-    <section id="">
-        <h1>Contact</h1>
+    <section id="" class="lg-margin-top">
+        <h1>Contact Me</h1>
+        <p>Thank you for visiting my website!</p>
     </section>
+
+    <hr>
+
+    <section>
+        <p>If you would like to get in touch, please feel free to reach out through one of the following methods:</p>
+        <ul class="contact-list">
+            <li><a href="https://linkedin.com/in/chiara-knicker" target="_blank"><i class="fa fa-linkedin icon"></i>LinkedIn</a></li>
+            <li><a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github icon"></i>GitHub</a></li>
+        </ul>
+        <p>For more information about my projects, check out my GitHub:</p>
+        <ul class="contact-list">
+            <li><a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github icon"></i>GitHub</a></li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <footer id="myFooter"></footer>
+    <script>document.getElementById("myFooter").innerHTML = myFooter;</script>
     
 </body>
 

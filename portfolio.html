@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"> 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <script src="js/script.js"></script>
-
-    <title>Chiara Knicker Portfolio</title>
+<head id="myHead">
+  <script src="js/script.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="name">ChiaraKnicker.</a>
-            <a class="nav-icon" onclick="myFunction()">
-              <i class="fa fa-bars icon"></i>
-            </a>
-            <ul class="nav-links" id="navLinks">
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header id="myHeader"></header>
+  <script>document.getElementById("myHeader").innerHTML = myHeader;</script>
 
-    <section id="" class="sm-margin-bottom">
+    <section id="" class="lg-margin-top">
         <h1>Portfolio</h1>
         <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github icon"></i>My GitHub</a>
     </section>
 
     <hr>
 
-    <section id="" class="sm-margin-top sm-margin-bottom">
+    <section id="">
         <div class="filter">
             <h2>Filter</h2>
             <div id="checkboxes">
@@ -48,6 +29,10 @@
                     Embedded Systems
                 </label>
                 <label>
+                  <input type="checkbox" value="competition" onchange="filterProjects()">
+                    Competition
+              </label>
+                <label>
                     <input type="checkbox" value="other" onchange="filterProjects()">
                     Other
                 </label>
@@ -58,7 +43,7 @@
 
     <hr>
 
-    <section id="" class="sm-margin-top sm-margin-bottom">
+    <section id="">
         <div class="container cybersecurity other">
             <div class="icons">
               <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-2x icon"></i></a>
@@ -66,7 +51,7 @@
             </div>
             <h3><a href="project1.html">Project 1</a></h3>
             <p class="topic">Area</p>
-            <p class="description">
+            <p class="lightgrey">
               Project summary text goes here...
             </p>
             <a href="project1.html"><i class="fa fa-link icon"></i>More info</a>
@@ -83,7 +68,7 @@
             </div>
             <h3><a href="#project2">Project 2</a></h3>
             <p class="topic">Area</p>
-            <p class="description">
+            <p class="lightgrey">
               Project summary text goes here...
             </p>
             <a href="#project2"><i class="fa fa-link icon"></i>More info</a>
@@ -100,7 +85,7 @@
             </div>
             <h3><a href="#project3">Project 3</a></h3>
             <p class="topic">Area</p>
-            <p class="description">
+            <p class="lightgrey">
               Project summary text goes here...
             </p>
             <a href="#project3"><i class="fa fa-link icon"></i>More info</a>
@@ -110,9 +95,29 @@
               <li>Skill 3</li>
             </ul>
         </div>
+        <div class="container competition">
+          <div class="icons">
+            <a href="https://github.com/chiara-knicker" target="_blank"><i class="fa fa-github fa-2x icon"></i></a>
+            <!--<a href="#project1" target="_blank"><i class="fa fa-external-link fa-lg icon"></i></a>-->
+          </div>
+          <h3><a href="#project3">Competition 1</a></h3>
+          <p class="topic"><i class="fa fa-trophy icon"></i><i class="fa fa-shield icon"></i>Area</p>
+          <p class="lightgrey">
+            Competition summary text goes here...
+          </p>
+          <a href="#competition1"><i class="fa fa-link icon"></i>More info</a>
+          <ul class="skills-list">
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+          </ul>
+      </div>
     </section>
 
     <hr>
+
+    <footer id="myFooter"></footer>
+    <script>document.getElementById("myFooter").innerHTML = myFooter;</script>
     
 </body>
 
