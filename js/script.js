@@ -73,10 +73,13 @@ var prevScrollPos = window.scrollY;
 window.addEventListener("scroll", function () {
   var currentScrollPos = window.scrollY;
 
-  if (prevScrollPos > currentScrollPos) {
+  if (currentScrollPos <= 0) { // some devices have a "bounce-back" effect when scrolling all the way up
+    document.querySelector("header").classList.remove("header-hidden");
+  } else if (prevScrollPos > currentScrollPos) {
     document.querySelector("header").classList.remove("header-hidden");
   } else {
     document.querySelector("header").classList.add("header-hidden");
+    navLinks.classList.remove("active"); // Close the dropdown when scrolling down
   }
 
   prevScrollPos = currentScrollPos;

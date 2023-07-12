@@ -116,14 +116,15 @@ section {
     border-radius: 10px;
     padding: 80px 0 100px 0; /*used to be 40 0 60 0*/
     font-size: 2.6rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #shortcuts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
+    align-items: stretch;
 }
 
 .shortcut {
@@ -131,10 +132,15 @@ section {
     background-color: var(--home);
     border-radius: 10px;
     border: 1px solid var(--shortcut-border);    
-    padding: 10px 20px;
+    padding: 10px 5px;
     text-align: center;
     font-size: small;
 }
+
+.break-line {
+    display: none; /* Hide the line break by default */
+}
+
 /*
 .sm-margin-top {
     margin-top: 60px;
@@ -143,6 +149,10 @@ section {
 .sm-margin-bottom {
     margin-bottom: 60px;
 }*/
+
+.md-margin-top {
+    margin-top: 150px;
+}
 
 .lg-margin-top {
     margin-top: 220px;
@@ -274,9 +284,17 @@ a:hover {
     margin-top: 0;
 }
 
+.small-screen-only {
+    display: none !important;
+}
+
 /* --------------------------- FILTERING --------------------------- */
 #checkboxes {
     margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
 }
 
 /* --------------------------- ICONS --------------------------- */
@@ -461,7 +479,7 @@ footer {
         right: 0;
         width: auto;
         background-color: var(--background);
-        padding: 10px 35px;
+        padding: 10px 35px 10px 10px;
         flex-direction: column;
         text-align: right;
     }
@@ -472,7 +490,11 @@ footer {
 
     /* Adjust margins */
     section {
-        margin: 60px 60px
+        margin: 60px 40px
+    }
+
+    .md-margin-top {
+        margin-top: 100px;
     }
 
     .lg-margin-top {
@@ -484,8 +506,8 @@ footer {
     }
 
     hr {
-        margin-left: 60px;
-        margin-right: 60px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     /* Move memoji above home text */
@@ -508,6 +530,42 @@ footer {
     /* Place shortcuts in 2 rows */
     #shortcuts {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .small-screen-only {
+        display: block !important;
+    }
+
+    .big-screen-only {
+        display: none;
+    }
+}
+
+/* Small screen height */
+@media screen and (max-height: 520px) {
+    #memoji {
+      display: none;
+    }
+
+    .md-margin-top {
+        margin-top: 100px;
+    }
+
+    .lg-margin-top {
+        margin-top: 100px !important;
+    }
+
+    .lg-margin-bottom {
+        margin-bottom: 100px !important;
+    }
+
+    #home {
+        padding-bottom: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #shortcuts {
+        margin-top: 20px !important;
     }
 }
 
@@ -549,7 +607,7 @@ footer {
     }
 
     #home {
-        padding: 40px 0 60px 0;
+        padding: 40px 5px 60px 5px;
     }
     
     /* Place shortcuts in 2 rows */

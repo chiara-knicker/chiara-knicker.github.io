@@ -2,6 +2,7 @@
 <html lang="en"> 
 
 <head id="myHead">
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js"></script>
 </head>
 
@@ -9,9 +10,9 @@
     <header id="myHeader"></header>
     <script>document.getElementById("myHeader").innerHTML = myHeader;</script>
     
-    <section id="home" class="section-with-picture lg-margin-top lg-margin-bottom">
+    <section id="home" class="section-with-picture md-margin-top lg-margin-bottom">
         <div>
-            <img src="images/memoji.png" alt="memoji">
+            <img id="memoji" src="images/memoji.png" alt="memoji">
         </div>
         <div>
             <p>I'm Chiara Knicker, a computer science student.</p>
@@ -19,10 +20,14 @@
     </section>
 
     <section id="shortcuts" class="lg-margin-bottom">
-      <a href="#about"><div class="shortcut"><i class="fa fa-user fa-lg icon"></i>About Me</div></a>
-      <a href="resume.html#education"><div class="shortcut"><i class="fa fa-graduation-cap fa-lg icon"></i>Education</div></a>
-      <a href="portfolio.html"><div class="shortcut"><i class="fa fa-folder fa-lg icon"></i>Projects</div></a>
-      <a href="resume.html#skills"><div class="shortcut"><i class="fa fa-code fa-lg icon"></i>Skills</div></a>
+      <a href="#about">
+        <div class="shortcut"><i class="fa fa-user fa-lg icon"></i><br class="small-screen-only" />About Me</div></a>
+      <a href="resume.html#education">
+        <div class="shortcut"><i class="fa fa-graduation-cap fa-lg icon"></i><br class="small-screen-only" />Education</div></a>
+      <a href="portfolio.html">
+        <div class="shortcut"><i class="fa fa-folder fa-lg icon"></i><br class="small-screen-only" />Projects</div></a>
+      <a href="resume.html#skills">
+        <div class="shortcut"><i class="fa fa-code fa-lg icon"></i><br class="small-screen-only" />Skills</div></a>
     </section>
 
     <hr>
@@ -36,7 +41,7 @@
         
         <h4>What I'm interested in</h4>
 
-        <div class="interest-container">
+        <div class="interest-container big-screen-only">
           <div class="icon-container">
             <i class="fa fa-shield fa-3x icon"></i>
           </div>
@@ -49,7 +54,19 @@
           </div>
         </div>
 
-        <div class="interest-container">
+        <div class="container small-screen-only">
+          <div class="icons">
+            <i class="fa fa-shield fa-lg icon"></i>
+          </div>
+          <h3>Cybersecurity</h3>
+          <p class="lightgrey">
+            Project summary text goes here...
+          </p>
+          <a href="portfolio.html?filter=cybersecurity"><i class="fa fa-link icon"></i>Related projects</a>
+          <ul class="skills-list"></ul>
+        </div>
+
+        <div class="interest-container big-screen-only">
           <div class="icon-container">
             <i class="fa fa-cogs fa-3x icon"></i>
           </div>
@@ -60,6 +77,18 @@
             </p>
             <a href="portfolio.html?filter=embedded-systems"><i class="fa fa-link icon"></i>See related projects</a>
           </div>
+        </div>
+        
+        <div class="container small-screen-only">
+          <div class="icons">
+            <i class="fa fa-cogs fa-lg icon"></i>
+          </div>
+          <h3>Embedded Systems</h3>
+          <p class="lightgrey">
+            Project summary text goes here...
+          </p>
+          <a href="portfolio.html?filter=embedded-systems"><i class="fa fa-link icon"></i>Related projects</a>
+          <ul class="skills-list"></ul>
         </div>
     </section>
 
@@ -83,7 +112,7 @@
             <ul class="skills-list">
               <li>Skill 1</li>
               <li>Skill 2</li>
-              <li>Skill 3</li>
+              <li class="big-screen-only">Skill 3</li>
             </ul>
         </div>
 
@@ -101,7 +130,7 @@
             <ul class="skills-list">
               <li>Skill 1</li>
               <li>Skill 2</li>
-              <li>Skill 3</li>
+              <li class="big-screen-only">Skill 3</li>
             </ul>
         </div>
 
