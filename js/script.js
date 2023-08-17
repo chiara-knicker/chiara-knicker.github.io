@@ -6,24 +6,24 @@ document.documentElement.setAttribute("color-scheme", colorScheme);
 document.getElementById("myHead").innerHTML = `
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 
     <title>Chiara Knicker Portfolio</title>
   `
 var myHeader = `
     <nav class="navbar">
-      <a href="index.html" class="name">ChiaraKnicker.</a>
+      <a href="/index.html" class="name">ChiaraKnicker.</a>
       <a class="nav-icon" onclick="showNavDropdown()">
         <i class="fa fa-bars icon"></i>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/resume.html">Resume</a></li>
+        <li><a href="/portfolio.html">Projects</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
   `
@@ -79,7 +79,10 @@ window.addEventListener("scroll", function () {
     document.querySelector("header").classList.remove("header-hidden");
   } else {
     document.querySelector("header").classList.add("header-hidden");
-    navLinks.classList.remove("active"); // Close the dropdown when scrolling down
+    if (navLinks.classList.contains("active")) {
+      showNavDropdown();
+    }
+    //navLinks.classList.remove("active"); // Close the dropdown when scrolling down
   }
 
   prevScrollPos = currentScrollPos;

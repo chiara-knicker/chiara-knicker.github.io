@@ -114,7 +114,7 @@ section {
 #home {
     background-color: var(--home);
     border-radius: 10px;
-    padding: 80px 0 100px 0; /*used to be 40 0 60 0*/
+    padding: 60px 7px 80px 7px; /*used to be 40 0 60 0*/
     font-size: 2.6rem;
     margin-bottom: 15px;
 }
@@ -151,7 +151,7 @@ section {
 }*/
 
 .md-margin-top {
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .lg-margin-top {
@@ -322,12 +322,12 @@ label {
   
   .timeline li {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
   
   .timeline li .bullet {
     position: absolute;
-    top: 10px;
+    top: 14px;
     left: -10px;
     transform: translateY(-50%);
     width: 10px;
@@ -348,29 +348,53 @@ label {
     font-weight: bold;
     margin-top: 5px;
     color: grey;
+    font-size: small;
   }
 
-/* --------------------------- LISTS --------------------------- */
-.skills-list-resume {
-    margin-left: -10px;
-    list-style: none;
+  .institution {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: lightgrey;
+  }
+
+.col {
+    float: left;
+    width: 50%;
+    margin: 5px 0;
 }
 
-.skills-list-resume li {
-    margin-bottom: 10px;
+.row {
+    margin-left: 20px;
 }
-  
-/*Bullet points (look the same as bullets on timeline)*/
-.skills-list-resume li:before {
+
+.row:after {
     content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: grey;
-    margin-right: 30px;
-    vertical-align: middle;
+    display: table;
+    clear: both;
 }
+
+.timeline.no-line li .bullet {
+    top: 11px;
+    background-color: lightgrey;
+}
+
+.timeline.no-line:before {
+    background-color: transparent;
+}
+
+.timeline.no-line li {
+    margin-bottom: 14px;
+}
+
+.timeline.icon-bullets li .bullet {
+    top: 9px;
+    background-color: transparent;
+}
+
+/* --------------------------- CONTACT LIST --------------------------- */
 
 .contact-list {
     list-style-type: none;
@@ -524,12 +548,16 @@ footer {
     }
 
     #home {
-        padding: 40px 0 60px 0;
+        padding: 30px 7px 30px 7px;
     }
     
     /* Place shortcuts in 2 rows */
     #shortcuts {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .col {
+        width: 100%;
     }
 
     .small-screen-only {
@@ -542,7 +570,7 @@ footer {
 }
 
 /* Small screen height */
-@media screen and (max-height: 520px) {
+@media screen and (max-height: 520px) and (max-width: 900px) {
     #memoji {
       display: none;
     }
@@ -560,12 +588,17 @@ footer {
     }
 
     #home {
+        padding-top: 10px !important;
         padding-bottom: 10px !important;
         margin-bottom: 20px !important;
     }
 
     #shortcuts {
         margin-top: 20px !important;
+    }
+
+    .col {
+        width: 100%;
     }
 }
 
@@ -578,6 +611,10 @@ footer {
 
     section {
         margin: 60px 90px
+    }
+
+    .md-margin-top {
+        margin-top: 150px;
     }
 
     .lg-margin-top {
@@ -607,12 +644,16 @@ footer {
     }
 
     #home {
-        padding: 40px 5px 60px 5px;
+        padding: 40px 7px 40px 7px;
     }
     
     /* Place shortcuts in 2 rows */
     #shortcuts {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .col {
+        width: 100%;
     }
 }
 
